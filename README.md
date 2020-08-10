@@ -10,6 +10,8 @@ php artisan migrate
 Config Values-
 Safe Limit
 Basic Auth User, Password
+Database,
+Redis
 
 Throttling Limit set to 20 per minute
 
