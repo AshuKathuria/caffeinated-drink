@@ -13,6 +13,9 @@ Basic Auth User, Password
 
 Throttling Limit set to 20 per minute
 
-## Config for Frontend
+## Frontend
+Copy .env.example as .env
+
+Config Values-
 REACT_APP_BACKEND_URL
 REACT_APP_AUTH
