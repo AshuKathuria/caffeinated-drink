@@ -18,12 +18,20 @@ class FavoriteRepository implements FavoriteRepositoryInterface {
     }
     
     public function get() {
-        if(app('redis')->exists('favoritedrink')) {
-            return json_decode(app('redis')->get('favoritedrink'),true);
-        } 
-        
+        try {
+            if(app('redis')->exists('favoritedrink')) {
+                return json_decode(app('redis')->get('favoritedrink'),true);
+            } 
+        } catch(\RedisException $exception){
+            
+        }
         $favorites = $this->model->all()->toArray();
-        app('redis')->set('favoritedrink', json_encode($favorites));
+        
+        try {
+            app('redis')->set('favoritedrink', json_encode($favorites));
+        } catch(\RedisException $exception){
+            
+        }
         
         return $favorites;
     }
