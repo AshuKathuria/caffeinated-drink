@@ -13,7 +13,7 @@ class FavoriteSeeder extends Seeder
     {
         App\Favorite::create([
             'name' => 'Monster Ultra Sunrise',
-            'caffeine' => '75',
+            'caffeine' => '150',
             'description' => 'A refreshing orange beverage that has 75mg of caffeine per serving. Every can has two servings.'
         ]);
         
@@ -31,7 +31,7 @@ class FavoriteSeeder extends Seeder
         
         App\Favorite::create([
             'name' => 'Sugar free NOS',
-            'caffeine' => '130',
+            'caffeine' => '260',
             'description' => 'Another orange delight without the sugar. It has 130 mg. per serving and each can has two servings.'
         ]);
         
